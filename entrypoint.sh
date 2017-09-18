@@ -19,7 +19,7 @@ if [ $# = 0 ]; then
     tail -f /dev/null
 else
     # execute the command passed through docker
-    "$@"
+    # "$@"
 
     # if this command was a server start cmd
     # to get around linuxgsm running everything in
@@ -28,7 +28,11 @@ else
     # this keeps the container running
     # when invoked via docker run
     # but requires -it or at least -t
-    tmux set -g status off && tmux attach 2> /dev/null
+    #tmux set -g status off && tmux attach 2> /dev/null
+    ./linuxgsm $@
+    $@ auto-install
+    $@ start
+    while true; do sleep 1000; done
 fi
 
 
