@@ -2,7 +2,7 @@
 
 A docker container distribution of https://github.com/GameServerManagers/LinuxGSM
 
-Dockerhub https://hub.docker.com/r/akshmakov/linuxgsm/
+Dockerhub https://hub.docker.com/r/grido/edgegaming/
 
 Run Game Servers in Docker, multiplex multiple LinuxGSM deployments easily by taking advantage of Dockers port mapping.
 
